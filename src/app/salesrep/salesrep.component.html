@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+            <div class="md-form">
+                <div class="md-form">
+                    <input mdbActive type="text" id="form-contact-name" class="form-control" formControlName="post">
+                    <label for="form-contact-name" class="">Your name</label>
+                </div>
+            </div>
+        </div></div>
+        <button type="submit" [disabled]="form.invalid" class="btn-floating btn-lg blue waves-light" mdbRippleRadius>Create post</button>
+      </form>
+
+      <div class="list-group">
+          
+          <a href="#" class="list-group-item"  *ngFor =" let p of posts$| async  ">
+{{p.post}}
+          </a>
+          
+        </div></div>
+     

@@ -1,0 +1,66 @@
+
+<br>
+<br>
+<br>
+<div class="conatiner-fluid">
+
+<!--Table-->
+<table class="table">
+
+    <!--Table head-->
+    <thead class="mdb-color darken-3">
+        <tr class="white-text">
+            <th>Date</th>
+           <th>First Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Phone</th>
+            <th>Postcode</th>
+            <th>Bill</th>
+            <th>Bill</th>
+            
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        <tr *ngFor =" let lead of leads$| async  ">
+            
+            <td>{{ lead.date}}</td>
+            <td>{{ lead.name}}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.message }}</td>
+            <td>{{ lead.phone}}</td>
+            <td>{{ lead.postcode }}</td>
+            <td>{{ lead.bill/2}}</td>
+            <td>{{ lead.bill/2*120}}</td>
+          
+         </tr> 
+        
+    </tbody>
+    <!--Table body-->
+</table>
+<!--Table-->
+                                    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,72 @@
+
+ <!--Intro Section-->
+ <header>
+ <section class="view intro-2 hm-gradient">
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row flex-center pt-5 mt-3">
+                    <div class="col-md-6 text-center text-md-left margins">
+                        <div class="white-text">
+                            Get Your Result Now!
+                                <div class="card">
+                                        <div class="card-header deep-orange lighten-1 white-text">
+                                            Enter your Bill
+                                        </div>
+                                        <div class="card-body">
+                                <div class="md-form">
+                                        <form class="form-inline">
+                                                <div class="form-group">
+                                                   <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">$</span>
+                                                    </div>
+                                                         <input mdbActive type="text" id="form1" class="form-control" #bill>
+                                                         <label for="form1" class="">Bill</label>
+                                                         <div class="input-group-append">
+                                                            <span class="input-group-text">.00</span>
+                                                        </div>
+                                                         <button type="button" class="btn peach-gradient btn-lg waves-light" (click)="cal(bill.value)"mdbRippleRadius>calculate Now</button>
+                                                         </div></div></form>
+                                          </div>
+                                             </div>
+                                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
+
+<div class="col-md-3"><h3>Your New Bill 
+       <br> {{newbill}}</h3></div>
+<div class="col-md-3"><h3>your Yearly savings <br>{{newbill*12}}</h3> </div>
+<div class="col-md-3"><h3>Your 10 Year savings <br>{{newbill*120}}</h3></div>
+<div class="col-md-3"><h3>Recomended system  <br>{{systs}}</h3><button type="button" class="btn btn-success btn-rounded waves-light"routerLink = "/Get-Price" mdbRippleRadius>Get Price</button></div>
+                   
+                                                              
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section></header>
+       
+<div class="row">
+
+    <div class="col">
+<div style="display: block">
+    <canvas mdbChart 
+        [chartType]="chartType"
+        [datasets]="chartDatasets" 
+        [labels]="chartLabels"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartHover)="chartHovered($event)" 
+        (chartClick)="chartClicked($event)">
+    </canvas>
+</div></div>
+</div>
+<h1><strong></strong> </h1>
+<h1></h1>
+ 
+ 
+<h1>Your 10 Year savings</h1>
